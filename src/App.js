@@ -4,8 +4,9 @@ import "./App.scss";
 class App extends React.Component {
     render() {
         return(
-            <div className="App">
-                <h1> Hello, World! </h1>
+            <div className="AppStyle">
+                <h1> Hello, World HEre! </h1>
+                <h2>BLALAL</h2>
             </div>
         );
     }

@@ -34,10 +34,8 @@ module.exports = {
   devServer: {
     static: {
         directory: path.join(__dirname, "public")
-        // publicPath: "http://localhost:3000/dist/"
     },
     port: 3000,
     hot: true
-  },
-  plugins: [new webpack.HotModuleReplacementPlugin()]
+  }
 };
