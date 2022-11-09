@@ -30,5 +30,5 @@ npm install react react-dom
 
 5. Install sass and sass loader for better css
 ```
-npm install sass-loader sass
+npm install --save-dev sass-loader sass
 ```

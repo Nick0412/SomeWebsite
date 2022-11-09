@@ -1,5 +1,7 @@
+$some: purple;
+
 .App {
     margin: 1rem;
     font-family: Arial, Helvetica, sans-serif;
-    color: blue;
+    color: $some;
 }
