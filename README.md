@@ -22,3 +22,13 @@ webpack-dev-server \
 style-loader css-loader \
 babel-loader
 ```
+
+4. Install react and react dom
+```
+npm install react react-dom
+```
+
+5. Install sass and sass loader for better css
+```
+npm install sass-loader sass
+```
