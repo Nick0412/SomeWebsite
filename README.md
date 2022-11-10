@@ -20,7 +20,8 @@ webpack \
 webpack-cli \
 webpack-dev-server \
 style-loader css-loader \
-babel-loader
+babel-loader \
+html-webpack-plugin
 ```
 
 4. Install react and react dom
@@ -31,4 +32,9 @@ npm install react react-dom
 5. Install sass and sass loader for better css
 ```
 npm install --save-dev sass-loader sass
+```
+
+6. Install a linter
+```
+npm install --save-dev eslint-webpack-plugin eslint
 ```

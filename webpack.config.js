@@ -1,9 +1,13 @@
 const path = require("path");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require("webpack");
 
 module.exports = {
   entry: "./src/index.js",
-  mode: "development",
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "main.js"
+  },
   module: {
     rules: [
       {
@@ -15,27 +19,23 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [
-          // Creates `style` nodes from JS strings
           "style-loader",
-          // Translates CSS into CommonJS
           "css-loader",
-          // Compiles Sass to CSS
           "sass-loader"
         ]
       }
     ]
   },
   resolve: { extensions: ["*", ".js", ".jsx"] },
-  output: {
-    path: path.resolve(__dirname, "dist/"),
-    publicPath: "/dist/",
-    filename: "bundle.js"
-  },
+  plugins: [
+    new HtmlWebpackPlugin({
+        template: './src/index.html'
+    })
+  ],
   devServer: {
-    static: {
-        directory: path.join(__dirname, "public")
-    },
     port: 3000,
-    hot: true
+    static: {
+        directory: path.join(__dirname, 'src'),
+    }
   }
 };
