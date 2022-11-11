@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+      "allowUnreachableCode": false,
+      "allowUnusedLabels": false,
+      "noImplicitAny": true,
+      "noImplicitOverride": true,
+      "noImplicitReturns": true,
+      "noImplicitThis": true,
+      "noPropertyAccessFromIndexSignature": true,
+      "noUncheckedIndexedAccess": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "strict": true,
+      "outDir": "dist",
+      "module": "ES6",
+      "target": "ES6",
+      "jsx": "react",
+      "allowJs": true,
+      "allowSyntheticDefaultImports": true,
+      "moduleResolution": "Node"
+    },
+    "include": ["src/**/*"]
+}

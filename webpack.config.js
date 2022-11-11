@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require("webpack");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./src/index.tsx",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "main.js"
@@ -17,6 +17,11 @@ module.exports = {
         options: { presets: ["@babel/env"] }
       },
       {
+        test: /\.tsx?$/,
+        loader: 'ts-loader',
+        exclude: /node_modules/,
+      },
+      {
         test: /\.s[ac]ss$/i,
         use: [
           "style-loader",
@@ -26,11 +31,13 @@ module.exports = {
       }
     ]
   },
-  resolve: { extensions: ["*", ".js", ".jsx"] },
+  resolve: {
+    extensions: [ '.tsx', '.ts', '.js' ]
+  },
   plugins: [
     new HtmlWebpackPlugin({
         template: './src/index.html'
-    })
+    }),
   ],
   devServer: {
     port: 3000,
