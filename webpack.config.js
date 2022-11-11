@@ -32,7 +32,11 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [ '.tsx', '.ts', '.js' ]
+    extensions: [ '.tsx', '.ts', '.js' ],
+    alias: {
+      Utilities: path.resolve(__dirname, 'src/utilities/'),
+      Components: path.resolve(__dirname, 'src/components/'),
+    }
   },
   plugins: [
     new HtmlWebpackPlugin({

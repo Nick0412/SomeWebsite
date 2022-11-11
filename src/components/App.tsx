@@ -12,7 +12,7 @@ const user: User = {
 };
 
 class App extends React.Component {
-    render() {
+    override render() {
         return(
             <div>
                 <h1>HELLO Love: {user.name}, {user.id}</h1>

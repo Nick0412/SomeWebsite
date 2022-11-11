@@ -17,7 +17,11 @@
       "jsx": "react",
       "allowJs": true,
       "allowSyntheticDefaultImports": true,
-      "moduleResolution": "Node"
+      "moduleResolution": "Node",
+      "baseUrl": "./",
+      "paths": {
+        "Components/*": ["src/components/*"]
+      }
     },
     "include": ["src/**/*"]
 }
